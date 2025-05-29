@@ -95,13 +95,6 @@
   consistent: true,
 )
 
-== Skills
-
-*Languages*: Python, Go, Java, SQL, JavaScript, TypeScript, Bash \
-*Technologies*: React, Node.js, Docker, Kubernetes, PostgreSQL, Redis, AWS, GCP, Terraform \
-*Frameworks*: Flask, Express, Spring Boot, Apache Spark \
-*DevOps*: CI/CD, Git, Agile, Scrum, Microservices, REST APIs \
-
 == Certificates
 
 #certificates(
@@ -109,3 +102,10 @@
   issuer: "Amazon Web Services",
   date: "Jan 2021",
 )
+
+== Skills
+
+*Languages*: Python, Go, Java, SQL, JavaScript, TypeScript, Bash \
+*Technologies*: React, Node.js, Docker, Kubernetes, PostgreSQL, Redis, AWS, GCP, Terraform \
+*Frameworks*: Flask, Express, Spring Boot, Apache Spark \
+*DevOps*: CI/CD, Git, Agile, Scrum, Microservices, REST APIs \
