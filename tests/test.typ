@@ -75,7 +75,6 @@
   dates: "May 2024",
   degree: "PhD, Computer Science",
   gpa: "GPA: 4.0/4.0",
-  consistent: true,
 )
 
 #edu(
@@ -84,7 +83,6 @@
   dates: "May 2022",
   degree: "Master of Science, Computer Science",
   gpa: "GPA: 3.9/4.0",
-  consistent: true,
 )
 
 #edu(
@@ -92,12 +90,11 @@
   location: "Berkeley, CA",
   dates: "May 2020",
   degree: "Bachelor of Science, Computer Science",
-  consistent: true,
 )
 
-== Certificates
+== Certifications
 
-#certificates(
+#certifications(
   name: "AWS Certified Solutions Architect",
   issuer: "Amazon Web Services",
   date: "Jan 2021",

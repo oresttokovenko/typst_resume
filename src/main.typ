@@ -7,6 +7,7 @@
   author: "",
   author-position: center,
   personal-info-position: center,
+  vertical-spacing: 7pt,
   pronouns: "",
   location: "",
   email: "",
@@ -27,7 +28,6 @@
 
   // Document-wide formatting, including font and margins
   set text(
-    // LaTeX style font
     font: font,
     size: font-size,
     lang: "en",
@@ -100,8 +100,8 @@
       }
     ]
 
-  // Main body.
-  set par(justify: true, spacing: 7pt)
+  // Main body
+  set par(justify: true, spacing: vertical-spacing)
 
   body
 }
@@ -123,6 +123,8 @@
     )
 }
 
+// Work Experience
+
 #let work(
   title: "",
   dates: "",
@@ -137,9 +139,9 @@
   )
 }
 
-// Certificates
+// Certifications
 
-#let certificates(
+#let certifications(
   name: "",
   issuer: "",
   date: "",
