@@ -4,7 +4,7 @@ This is a clean, minimal resume template built in [Typst](https://typst.app), de
 
 ## Requirements
 
-- [Typst compiler](https://typst.app/docs/install/)
+- [Typst compiler](https://github.com/typst/typst#usage)
 - [`just`](https://github.com/casey/just) task runner (For Development)
 
 ## Usage
