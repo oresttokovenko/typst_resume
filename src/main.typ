@@ -101,7 +101,7 @@
     ]
 
   // Main body.
-  set par(justify: true)
+  set par(justify: true, spacing: 7pt)
 
   body
 }
