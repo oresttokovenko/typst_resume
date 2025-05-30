@@ -13,14 +13,23 @@ To install this template as a reusable local Typst package:
 
 ### 1. Copy to Typst’s local package directory
 
+On **macOS**, Typst stores local packages under:
+
 ```bash
-~/.local/share/typst/packages/local/orest-tokovenko-resume
+~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0
+```
+
+Copy your resume files there:
+
+```bash
+mkdir -p ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0
+cp -r . ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0/
 ```
 
 ### 2. Import and use in Typst
 
 ```typst
-#import "@local/typst_resume": *
+#import "@local/orest-tokovenko-resume:0.1.0": *
 
 #show: resume.with(
   author: "Jane Doe",
@@ -28,8 +37,3 @@ To install this template as a reusable local Typst package:
   ...
 )
 ```
-
-You can now reuse the template across projects without copying files
-
-
-
