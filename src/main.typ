@@ -17,7 +17,7 @@
   accent-color: "#3A5FCD",
   font: "SF Pro Display",
   paper: "us-letter",
-  author-font-size: 20pt,
+  author-font-size: 25pt,
   font-size: 10pt,
   body,
 ) = {

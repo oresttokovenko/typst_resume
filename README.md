@@ -5,15 +5,31 @@ This is a clean, minimal resume template built in [Typst](https://typst.app), de
 ## Requirements
 
 - [Typst compiler](https://typst.app/docs/install/)
-- [`just`](https://github.com/casey/just) task runner
+- [`just`](https://github.com/casey/just) task runner (For Development)
 
 ## Usage
 
-Import directly from the GitHub URL in your own Typst project
+To install this template as a reusable local Typst package:
 
+### 1. Copy to Typst’s local package directory
+
+```bash
+~/.local/share/typst/packages/local/orest-tokovenko-resume
 ```
-#import "@github/oresttokovenko/typst_resume:main": *
+
+### 2. Import and use in Typst
+
+```typst
+#import "@local/typst_resume": *
+
+#show: resume.with(
+  author: "Jane Doe",
+  email: "jane@example.com",
+  ...
+)
 ```
+
+You can now reuse the template across projects without copying files
 
 
 
