@@ -114,8 +114,6 @@
   degree: "",
   gpa: "",
   location: "",
-  // Makes dates on upper right like rest of components
-  consistent: false,
 ) = {
     generic-two-by-two(
       top-left: strong(institution),
