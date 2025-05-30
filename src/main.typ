@@ -43,7 +43,7 @@
 
   // Small caps for section titles
   show heading.where(level: 2): it => [
-    #pad(top: 0pt, bottom: -10pt, [#smallcaps(it.body)])
+    #pad(top: -5pt, bottom: -10pt, [#smallcaps(it.body)])
     #line(length: 100%, stroke: 0.5pt)
   ]
 
@@ -52,14 +52,14 @@
     fill: rgb(accent-color),
   )
 
-  // Name will be aligned left, bold and big
+  // Name will be aligned, bold and big
   show heading.where(level: 1): it => [
     #set align(author-position)
     #set text(
       weight: 800,
       size: author-font-size,
     )
-    #pad([#smallcaps(it.body)])
+    #pad(top: -10pt, bottom: -5pt, [#smallcaps(it.body)])
   ]
 
   // Level 1 Heading
@@ -77,9 +77,7 @@
   }
 
   // Personal Info
-  pad(
-    top: 0.25em,
-    align(personal-info-position)[
+  align(personal-info-position)[
       #{
         let raw_items = (
           contact-item(phone),
@@ -100,8 +98,7 @@
         #line2
       ]
       }
-    ],
-  )
+    ]
 
   // Main body.
   set par(justify: true)
@@ -120,23 +117,12 @@
   // Makes dates on upper right like rest of components
   consistent: false,
 ) = {
-  if consistent {
-    // edu-constant style (dates top-right, location bottom-right)
     generic-two-by-two(
       top-left: strong(institution),
       top-right: dates,
-      bottom-left: emph(degree),
+      bottom-left: degree,
       bottom-right: emph(location),
     )
-  } else {
-    // original edu style (location top-right, dates bottom-right)
-    generic-two-by-two(
-      top-left: strong(institution),
-      top-right: location,
-      bottom-left: emph(degree),
-      bottom-right: emph(dates),
-    )
-  }
 }
 
 #let work(

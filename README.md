@@ -11,19 +11,19 @@ This is a clean, minimal resume template built in [Typst](https://typst.app), de
 
 To install this template as a reusable local Typst package:
 
-### 1. Copy to Typst’s local package directory
+### 1. Clone into Typst’s local package directory
 
 On **macOS**, Typst stores local packages under:
 
 ```bash
-~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0
+~/Library/Application\ Support/typst/packages/local
 ```
 
-Copy your resume files there:
+To install this resume package, clone it directly into the correct location:
 
 ```bash
-mkdir -p ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0
-cp -r . ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0/
+git clone https://github.com/oresttokovenko/orest-tokovenko-resume.git \
+  ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume@0.1.0
 ```
 
 ### 2. Import and use in Typst
@@ -37,3 +37,7 @@ cp -r . ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resu
   ...
 )
 ```
+
+### Notes
+- The folder must match the pattern `PACKAGENAME@VERSION`, e.g., `orest-tokovenko-resume@0.1.0`.
+- Typst will automatically detect and use this package if it’s in the right directory.
