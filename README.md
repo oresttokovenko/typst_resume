@@ -71,4 +71,4 @@ See [USAGE.md](USAGE.md) for installation instructions and development setup.
 
 ## License
 
-[Unlicense](LICENSE)
+[MIT](LICENSE)
