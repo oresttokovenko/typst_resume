@@ -25,10 +25,9 @@
   work-format: "job-title-primary",
   body,
 ) = {
-
   assert(
-      work-format == "job-title-primary" or work-format == "company-primary",
-      message: "work-format must be 'job-title-primary' or 'company-primary'"
+    work-format == "job-title-primary" or work-format == "company-primary",
+    message: "work-format must be 'job-title-primary' or 'company-primary'",
   )
 
   work-format-state.update(work-format)
@@ -41,12 +40,12 @@
     size: font-size,
     lang: "en",
     // Disable ligatures so ATS systems do not get confused when parsing fonts
-    ligatures: false
+    ligatures: false,
   )
 
   // 0.5in margin on all sides
   set page(
-    margin: (0.5in),
+    margin: 0.5in,
     paper: paper,
   )
 
@@ -87,15 +86,15 @@
 
   // Personal Info
   align(personal-info-position)[
-      #{
-        let raw_items = (
-          contact-item(phone),
-          contact-item(location),
-          contact-item(email, link-type: "mailto:"),
-          contact-item(github, link-type: "https://"),
-          contact-item(linkedin, link-type: "https://"),
-          contact-item(personal-site, link-type: "https://"),
-        )
+    #{
+      let raw_items = (
+        contact-item(phone),
+        contact-item(location),
+        contact-item(email, link-type: "mailto:"),
+        contact-item(github, link-type: "https://"),
+        contact-item(linkedin, link-type: "https://"),
+        contact-item(personal-site, link-type: "https://"),
+      )
 
       let items = raw_items.filter(x => x != none)
       let half = calc.floor(items.len() / 2)
@@ -106,8 +105,8 @@
         #line1 \
         #line2
       ]
-      }
-    ]
+    }
+  ]
 
   // Main body
   set par(justify: true, spacing: vertical-spacing)
@@ -124,12 +123,12 @@
   gpa: "",
   location: "",
 ) = {
-    generic-two-by-two(
-      top-left: strong(institution),
-      top-right: dates,
-      bottom-left: degree,
-      bottom-right: emph(location),
-    )
+  generic-two-by-two(
+    top-left: strong(institution),
+    top-right: dates,
+    bottom-left: degree,
+    bottom-right: emph(location),
+  )
 }
 
 // Work Experience
