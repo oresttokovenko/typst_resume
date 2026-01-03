@@ -3,6 +3,8 @@
 
 #import "./helper.typ": *
 
+#let work-format-state = state("work-format", "job-title-primary")
+
 #let resume(
   author: "",
   author-position: center,
@@ -20,9 +22,16 @@
   paper: "us-letter",
   author-font-size: 25pt,
   font-size: 10pt,
+  work-format: "job-title-primary",
   body,
 ) = {
 
+  assert(
+      work-format == "job-title-primary" or work-format == "company-primary",
+      message: "work-format must be 'job-title-primary' or 'company-primary'"
+  )
+
+  work-format-state.update(work-format)
   // Sets document metadata
   set document(author: author, title: author)
 
@@ -131,12 +140,25 @@
   company: "",
   location: "",
 ) = {
-  generic-two-by-two(
-    top-left: strong(title),
-    top-right: dates,
-    bottom-left: company,
-    bottom-right: emph(location),
-  )
+  // Read the state (requires context)
+  context {
+    let format = work-format-state.get()
+    if format == "company-primary" {
+      generic-two-by-two(
+        top-left: if company != "" { strong(company) },
+        top-right: if location != "" { emph(location) },
+        bottom-left: title,
+        bottom-right: dates,
+      )
+    } else {
+      generic-two-by-two(
+        top-left: if title != "" { strong(title) },
+        top-right: dates,
+        bottom-left: company,
+        bottom-right: if location != "" { emph(location) },
+      )
+    }
+  }
 }
 
 // Certifications
