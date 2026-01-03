@@ -1,6 +1,5 @@
 #import "../../src/lib.typ": *
 
-// Put your personal information here, replacing mine
 #let name = "John Smith"
 #let location = "Bay Area, CA"
 #let email = "johnsmith@example.com"
