@@ -1,4 +1,4 @@
-#import "../src/lib.typ": *
+#import "../../src/lib.typ": *
 
 // Put your personal information here, replacing mine
 #let name = "John Smith"
@@ -9,6 +9,7 @@
 #let phone = "+1 (415) 123-4567"
 #let personal-site = "johnsmith.dev"
 #let font-size = 10pt
+#let work-format = "job-title-primary"
 
 #show: resume.with(
   author: name,
@@ -19,6 +20,7 @@
   phone: phone,
   personal-site: personal-site,
   font-size: font-size,
+  work-format: work-format,
 )
 
 == Work Experience
@@ -31,8 +33,8 @@
 )
 - Led migration from monolithic services to microservices using Kubernetes, improving scalability and deployment time by 60% across engineering environments
 - Built and optimized ETL pipelines processing over 1B events per day using Apache Spark and Kafka for real-time data workflows
-- Mentored 4 junior engineers, helping them grow into mid-level contributors and leading successful feature rollouts and sprint deliveries
-- Implemented a new feature flag system that reduced deployment risk and improved feature rollout speed by 30% across product teams
+- Mentored 4 junior engineers, helping them grow into mid-level contributors and leading successful feature rollouts and sprints
+- Implemented a new feature flag system that reduced deployment risk and improved feature rollout speed by 30% across teams
 
 #work(
   title: "Software Engineer",
@@ -62,9 +64,9 @@
   company: "UC Berkeley Computer Science Department",
   dates: dates-helper(start-date: "Sep 2018", end-date: "May 2020"),
 )
-- Assisted in research on distributed systems and cloud computing, publishing findings in peer-reviewed journals and conference proceedings
+- Assisted in research on distributed systems and cloud computing, publishing findings in peer-reviewed journals and conferences
 - Developed a prototype for a distributed file system using Go, achieving 99.9% fault tolerance in controlled simulations
-- Conducted experiments and analyzed performance metrics, contributing to a research paper presented at a major conference event
+- Conducted experiments and analyzed performance metrics, contributing to a research paper presented at a major conference
 - Collaborated with professors and graduate students on various research projects, enhancing my understanding of theoretical computer science concepts and applications
 
 == Education

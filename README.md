@@ -1,43 +1,74 @@
 # Orest's Resume Template
 
-This is a clean, minimal resume template built in [Typst](https://typst.app), designed to be highly customizable and visually professional. Strongly inspired by [stuxf's basic-typst-resume-template](https://github.com/stuxf/basic-typst-resume-template).
+A clean, minimal resume template built in [Typst](https://typst.app), designed to be highly customizable and visually professional. Strongly inspired by [stuxf's basic-typst-resume-template](https://github.com/stuxf/basic-typst-resume-template).
 
-## Requirements
+## Features
 
-- [Typst compiler](https://github.com/typst/typst#usage)
-- [`just`](https://github.com/casey/just) task runner (For Development)
+- Clean, ATS-friendly design with ligatures disabled
+- Customizable fonts, colors, and spacing
+- Flexible work experience format (job-title-primary or company-primary)
+- Support for multiple roles at the same company
 
-## Usage
+## Work Experience Format
 
-To install this template as a reusable local Typst package:
+The template supports two formats for displaying work experience via the `work-format` parameter:
 
-### 1. Clone into Typst’s local package directory
+### Job Title Primary (default)
 
-On **macOS**, Typst stores local packages under:
-
-```bash
-~/Library/Application\ Support/typst/packages/local
+```
+Senior Software Engineer                    Jun 2022 - Present
+TechNova Inc.                              San Francisco, CA
 ```
 
-To install this resume package, clone it directly into the correct location:
+Use this when your job titles are more impressive or relevant than the company names.
 
-```bash
-git clone https://github.com/oresttokovenko/orest-tokovenko-resume.git \
-  ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume@0.1.0
+### Company Primary
+
+```
+TechNova Inc.                              San Francisco, CA
+Senior Software Engineer                    Jun 2022 - Present
 ```
 
-### 2. Import and use in Typst
+Use this when:
+- You work for a well-known company and want to highlight that
+- You have career progression within a single company (multiple roles are grouped under the company name)
+
+### Configuration
 
 ```typst
-#import "@local/orest-tokovenko-resume:0.1.0": *
-
 #show: resume.with(
   author: "Jane Doe",
-  email: "jane@example.com",
+  work-format: "company-primary",  // or "job-title-primary"
   ...
 )
 ```
 
-### Notes
-- The folder must match the pattern `PACKAGENAME@VERSION`, e.g., `orest-tokovenko-resume@0.1.0`.
-- Typst will automatically detect and use this package if it’s in the right directory.
+### Multiple Roles at One Company
+
+With `company-primary`, you can show promotions by omitting company/location on subsequent entries:
+
+```typst
+#work(
+  company: "TechNova Inc.",
+  location: "San Francisco, CA",
+  title: "Senior Software Engineer",
+  dates: dates-helper(start-date: "Jun 2022", end-date: "Present"),
+)
+- Accomplishment 1
+- Accomplishment 2
+
+#work(
+  title: "Software Engineer",
+  dates: dates-helper(start-date: "Jun 2020", end-date: "Jun 2022"),
+)
+- Accomplishment 1
+- Accomplishment 2
+```
+
+## Installation & Usage
+
+See [USAGE.md](USAGE.md) for installation instructions and development setup.
+
+## License
+
+[MIT](LICENSE)
