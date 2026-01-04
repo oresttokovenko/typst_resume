@@ -20,7 +20,7 @@ On **macOS**, Typst stores local packages under:
 To install this resume package, clone it directly into the correct location:
 
 ```bash
-git clone https://github.com/oresttokovenko/typst_resume \
+git clone https://github.com/oresttokovenko/git-hired \
   ~/Library/Application\ Support/typst/packages/local/git-hired/0.1.0
 ```
 
