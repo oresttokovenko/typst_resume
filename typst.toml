@@ -1,11 +1,11 @@
 [package]
-name = "orest-tokovenko-resume"
+name = "git-hired"
 version = "0.1.1"
 entrypoint = "src/lib.typ"
 authors = ["Orest Tokovenko <www.oresttokovenko.com>"]
 license = "MIT"
-description = "Orest Tokovenko's Resume"
-repository = "https://github.com/oresttokovenko/orest-tokovenko-resume"
+description = "A modern, minimal resume template for tech professionals"
+repository = "https://github.com/oresttokovenko/git-hired"
 exclude = [
 	".github",
 	"tests",

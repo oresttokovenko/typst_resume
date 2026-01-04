@@ -20,14 +20,14 @@ On **macOS**, Typst stores local packages under:
 To install this resume package, clone it directly into the correct location:
 
 ```bash
-git clone https://github.com/oresttokovenko/orest-tokovenko-resume.git \
-  ~/Library/Application\ Support/typst/packages/local/orest-tokovenko-resume/0.1.0
+git clone https://github.com/oresttokovenko/typst_resume \
+  ~/Library/Application\ Support/typst/packages/local/git-hired/0.1.0
 ```
 
 ### 2. Import and use in Typst
 
 ```typst
-#import "@local/orest-tokovenko-resume:0.1.0": *
+#import "@local/git-hired:0.1.0": *
 
 #show: resume.with(
   author: "Jane Doe",
@@ -38,7 +38,7 @@ git clone https://github.com/oresttokovenko/orest-tokovenko-resume.git \
 
 ### Notes
 
-- The folder must match the pattern `PACKAGENAME/VERSION`, e.g., `orest-tokovenko-resume/0.1.0`
+- The folder must match the pattern `PACKAGENAME/VERSION`, e.g., `git-hired/0.1.0`
 - Typst will automatically detect and use this package if it's in the right directory
 
 ## Development
