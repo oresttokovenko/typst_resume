@@ -4,6 +4,17 @@
 
 - [Typst compiler](https://github.com/typst/typst#usage)
 - [`just`](https://github.com/casey/just) task runner (for development)
+- [Inter font](https://rsms.me/inter/) (includes Inter Display)
+
+### Installing Inter font
+
+On macOS with Homebrew:
+
+```bash
+brew install --cask font-inter
+```
+
+On Linux, download from [GitHub releases](https://github.com/rsms/inter/releases) or use your package manager.
 
 ## Local Installation
 
@@ -11,7 +22,7 @@ To install this template as a reusable local Typst package:
 
 ### 1. Clone into Typst's local package directory
 
-On **macOS**, Typst stores local packages under:
+On macOS, Typst stores local packages under:
 
 ```bash
 ~/Library/Application\ Support/typst/packages/local

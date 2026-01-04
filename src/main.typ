@@ -18,10 +18,11 @@
   phone: "",
   personal-site: "",
   accent-color: "#3A5FCD",
-  font: "SF Pro Display",
+  font: "Inter Display",
   paper: "us-letter",
   author-font-size: 25pt,
   font-size: 10pt,
+  word-spacing: 70%,
   work-format: "job-title-primary",
   body,
 ) = {
@@ -39,6 +40,7 @@
     font: font,
     size: font-size,
     lang: "en",
+    spacing: word-spacing,
     // Disable ligatures so ATS systems do not get confused when parsing fonts
     ligatures: false,
   )
@@ -168,7 +170,7 @@
   date: "",
 ) = {
   [
-    *#name* | #issuer
+    *#name*  –  #issuer
     #h(1fr) #date
   ]
 }

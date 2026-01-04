@@ -15,8 +15,7 @@ watch-job-title-primary:
 watch-company-primary: 
   (watch "test-company-primary")
 
-build:
-  (compile "test-job-title-primary") (compile "test-company-primary")
+build: (compile "test-job-title-primary") (compile "test-company-primary")
 
 format:
     typstyle -i .
