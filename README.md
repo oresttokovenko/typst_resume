@@ -1,5 +1,7 @@
 # git-hired
 
+![Typst](https://img.shields.io/badge/typst-239DAD.svg?style=for-the-badge&logo=typst&logoColor=white)
+
 See an [example resume](https://github.com/oresttokovenko/git-hired/blob/main/tests/pdf/test-job-title-primary.pdf) to get a feel for the template.
 
 A clean, minimal resume template built in [Typst](https://typst.app), designed to be highly customizable and visually professional. Strongly inspired by [stuxf's basic-typst-resume-template](https://github.com/stuxf/basic-typst-resume-template).
