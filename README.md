@@ -1,4 +1,4 @@
-# Orest's Resume Template
+# git-hired
 
 A clean, minimal resume template built in [Typst](https://typst.app), designed to be highly customizable and visually professional. Strongly inspired by [stuxf's basic-typst-resume-template](https://github.com/stuxf/basic-typst-resume-template).
 
