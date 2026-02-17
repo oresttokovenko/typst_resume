@@ -7,7 +7,7 @@ watch name:
 
 [private]
 compile name:
-    typst compile {{ src }}/{{ name }}.typ {{ pdf }}/{{ name }}.pdf --root .
+    typst compile {{ src }}/{{ name }}.typ {{ pdf }}/{{ name }}.pdf --root . --pdf-standard a-2u
 
 watch-job-title-primary: 
   (watch "test-job-title-primary")

@@ -34,7 +34,6 @@
   work-format-state.update(work-format)
   // Sets document metadata
   set document(author: author, title: author, date: auto)
-  set pdf(standard: "a-2u")
 
   // Document-wide formatting, including font and margins
   set text(
