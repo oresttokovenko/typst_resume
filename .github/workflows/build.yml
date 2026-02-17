@@ -23,6 +23,9 @@ jobs:
       - name: Compile test-company-primary
         run: typst compile tests/src/test-company-primary.typ tests/pdf/test-company-primary.pdf --root . --pdf-standard a-2u
 
+      - name: Install poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
       - name: Verify text extraction
         run: |
           pdftotext tests/pdf/test-job-title-primary.pdf - | grep -q "John Smith"
