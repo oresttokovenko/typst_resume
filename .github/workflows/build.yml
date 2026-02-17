@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Compile test-job-title-primary
+        run: typst compile tests/src/test-job-title-primary.typ tests/pdf/test-job-title-primary.pdf --root .
+
+      - name: Compile test-company-primary
+        run: typst compile tests/src/test-company-primary.typ tests/pdf/test-company-primary.pdf --root .
