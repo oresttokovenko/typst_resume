@@ -1,6 +1,8 @@
 # git-hired
 
-![Typst](https://img.shields.io/badge/typst-239DAD.svg?style=for-the-badge&logo=typst&logoColor=white)
+[![Typst Universe](https://img.shields.io/badge/typst--universe-git--hired-239DAD?logo=typst)](https://typst.app/universe/package/git-hired/)
+[![License](https://img.shields.io/github/license/oresttokovenko/git-hired)](https://github.com/oresttokovenko/git-hired/blob/main/LICENSE)
+[![Build](https://img.shields.io/github/actions/workflow/status/oresttokovenko/git-hired/build.yml)](https://github.com/oresttokovenko/git-hired/actions)
 
 See an [example resume](https://github.com/oresttokovenko/git-hired/blob/main/tests/pdf/test-job-title-primary.pdf) to get a feel for the template.
 
@@ -9,6 +11,7 @@ A clean, minimal resume template built in [Typst](https://typst.app), designed t
 ## Features
 
 - Clean, ATS-friendly design with ligatures disabled
+- PDF/A-2u compliant output for guaranteed Unicode text extraction by ATS parsers
 - Customizable fonts, colors, and spacing
 - Flexible work experience format (job-title-primary or company-primary)
 - Support for multiple roles at the same company
